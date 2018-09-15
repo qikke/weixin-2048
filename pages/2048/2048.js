@@ -5,8 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    start:'start',
-    score:0,
+    hidden: false,
+    start: "start",
+    num: [],
+    score: 0,
+    bestScore: 0, 
+    endMsg: '',
+    over: false 
   },
 
   /**
