@@ -5,10 +5,10 @@
     <block wx:else>
       <image src='../../img/logo.png' class='logo'></image>
       <view class='loader'>
-        <text class='sct'></text>
-        <text></text>
-        <text></text>
-        <text></text>
+        <text class='{{current == 0 ? "sct": ""}}'></text>
+        <text class='{{current == 1 ? "sct": ""}}'></text>
+        <text class='{{current == 2 ? "sct": ""}}'></text>
+        <text class='{{current == 3 ? "sct": ""}}'></text>
       </view>
     </block>
   </view>

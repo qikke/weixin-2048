@@ -4,10 +4,10 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    current:0
   },
  
   onLoad: function () {
@@ -45,5 +45,27 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onReady: function () {
+    this.load();
+  },
+  load: function () {
+    var n = 1;
+    var timer = setInterval(() => {
+      if (n == 6) {
+        clearInterval(timer);
+        wx.redirectTo({
+          url: '../2048/2048'
+        })
+      }
+      this.setData({
+        current: this.data.current + 1
+      });
+      if (this.data.current > 3)
+        this.setData({
+          current: 0
+        });
+      n++;
+    }, 400);
   }
 })
