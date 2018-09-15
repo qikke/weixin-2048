@@ -1,2 +1,13 @@
 <!--pages/2048/2048.wxml-->
-<text>pages/2048/2048.wxml</text>
+<view class='container'>
+  <view class='head'>
+    <view class='lside'>
+      <text class='title'>2048</text>
+      <text class='play'>{{start}}</text>
+    </view>
+    <view class='rside'>
+      <text>score <text class='score'>{{score}}</text></text>
+    </view>
+  </view>
+</view>
+
