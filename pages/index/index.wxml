@@ -3,7 +3,13 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-      
+      <image src='../../img/logo.png' class='logo'></image>
+      <view class='loader'>
+        <text class='sct'></text>
+        <text></text>
+        <text></text>
+        <text></text>
+      </view>
     </block>
   </view>
 </view>
